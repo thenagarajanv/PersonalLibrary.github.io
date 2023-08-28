@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    
+    <header>
+      <div id="titleBlock">
+          <h1>Personal Library</h1>
+      </div>
+    </header>
+    <div class="card-group">
+        <div class="card border border-danger">
+          
+          <div class="card-body">
+
+                    <!--  addBook -->
+    <div id="adding-books" >
+        <h3>Add Your Books</h3><br>
+        <div id="book-name" class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Book Name : </span>
+            <input id="bookName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div id="author-name" class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Author Name : </span>
+            <input id="authorName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div id="book-price" class="input-group">
+            <span class="input-group-text">₹</span>
+            <input id="amount" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            <span class="input-group-text">Rs.</span>
+        </div><br>
+        <div id="book-status" class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Book Status :</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option value="-">Choose...</option>
+                <option value="1">Available</option>
+              <option value="0">Not Available</option>
+            </select>
+
+            <button class="btn btn-success"  id="add-fbook" onclick="addBooks()">Add</button>
+
+            <button class="btn btn-primary"  id="add-fbook" onclick="addFirst()">Add Front</button>
+        </div>
+    </div>
+
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary " style="font-weight: 300;">Keep as your Privacy 🤫</small>
+          </div>
+        </div>
+        <div class="card border border-primary-subtle">
+          
+          <div class="card-body">
+            
+        <div class="displayer">
+                            <!-- display all books -->
+            <h3>Display All Books</h3><br><br>
+         
+            <div class="display-board">
+
+              <button  onclick="caller()" style="justify-content: center;" id="display-books" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Display Books
+              </button>
+            </div>
+            
+          <br><br><br><br>
+        </div>
+  
+    <!-- Displaying Books Model -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Books</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="needtoput">Hello</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Display 😎 </small>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 2nd card -->
+
+      <div class="card-group">
+        <div class="card border border border-info border-start-0 rounded-end">
+          <div class="card-body">
+            
+            <div id="remove-last">
+              <h3>Remove Book</h3><br>
+              
+              <div class="btn-remover1">
+                <button class="bg-danger" onclick="remove()" id="remove-lbook">Remove</button>
+              </div>
+              <div class="btn-remover2">
+                <button class="bg-warning" onclick="removeFirst()" id="remove-lbook">Remove First</button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Sorry, Don't Like Remove Me 🤗</small>
+          </div>
+        </div>
+        
+        <!-- check book availability -->
+        <div class="card border border-primary border-start-0 rounded-end">
+          
+          <div class="card-body">
+              
+            <div class="searchID">
+                
+              <div class="search-text">
+                <h3>Check Books Availablity</h3><br>
+              </div>
+
+              <div id="checkersio" class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Book Name: </span>
+                <input id="checkers" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Book Availability</h4>    
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                          </div><div class="container"></div>
+                          <div class="modal-body">
+                            <p id="search-up">Coding On Progress...</p>
+                          </div>
+                          <div class="modal-footer">
+                            <a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark">Close</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                <div class="btn-search">
+                    <button type="button" onclick="checkandSearch()" class="btn btn-primary" data-bs-toggle="modal" href="#myModal" >Check</button>        
+                </div>
+            </div>
+          </div>
+          
+          <br><br><br><br>
+          <div class="card-footer">
+            <small class="text-body-secondary">Check your availability 🤫</small>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <footer>
+      &copy;Copyright By Nagarajan.V @2023
+    </footer>
+</body>
+</html>

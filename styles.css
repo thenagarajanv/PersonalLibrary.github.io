@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#adding-books{
+    padding: 10px;
+    margin: 50px auto;
+}
+
+#remove-last{
+    padding: 10px;
+    margin: 50px auto;
+}
+
+#remove-lbook{
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    font-weight: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#remove-first{
+    padding: 10px;
+    margin: 50px auto;
+}
+
+#remove-fbook{
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    font-weight: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#add-first{
+    padding: 10px;
+    margin: 50px auto;
+    display: absolute;
+}
+
+#add-fbook{
+    padding: 10px;
+    margin: 5px;
+    font-weight: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#display-books{
+    padding: 10px;
+    margin: 10px;
+}
+
+.displayer{
+    padding: 10px;
+    margin: 30px;
+    top: 20px;
+    left: 20px;
+}
+
+#display-books{
+    top: 30px;
+    left: 40px;
+    padding: 10px;
+    margin: 5px;
+    font-weight: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#check-book{
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    font-weight: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.btn-search{
+    display: grid;
+    grid-template-rows: min-content;
+    top: 50px;
+    position:relative;
+    padding: 10px;
+}
+
+.display-board{
+    display: grid;
+    grid-template-rows: min-content;
+    top: 50px;
+    position:relative;
+    padding: 10px;
+}
+
+.btn-remover1{
+    display: grid;
+    grid-template-rows: min-content;
+    top: 10px;
+    position:relative;
+    padding: 10px;
+}
+
+.btn-remover2{
+    display: grid;
+    grid-template-rows: min-content;
+    top: 40px;
+    position:relative;
+    padding: 10px;
+}
+
+.search-text{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#titleBlock{
+    background-color: rgb(1, 1, 1);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 10px;
+    text-align: center;
+    font-weight:800;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+footer{
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    font-weight: 300;
+    opacity:95%;
+}
